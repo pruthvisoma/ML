@@ -80,6 +80,7 @@
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
+      "individualColumnsRules": [],
       "valueColoringMode": "HASH"
     },
     "sorting": [],
@@ -94,6 +95,9 @@
           "enabled": false
         },
         "partitionSelectionMethod": "ALL",
+        "selectedPartitions": [
+          "NP"
+        ],
         "latestPartitionsN": 1,
         "ordering": {
           "enabled": false,
@@ -102,12 +106,13 @@
         "samplingMethod": "HEAD_SEQUENTIAL",
         "maxRecords": 10000,
         "targetRatio": 0.02,
+        "column": "industry",
         "ascending": true,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 0
+      "_refreshTrigger": 1721470074449
     },
     "vizSampling": {
       "selection": {
@@ -142,5 +147,6 @@
   "charts": [],
   "interactiveSearch": {
     "savedQueries": []
-  }
+  },
+  "customMeasures": []
 }
