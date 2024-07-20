@@ -63,7 +63,7 @@
     "users": []
   },
   "tutorialProject": true,
-  "tutorialId": "QS_MLOPS",
+  "tutorialId": "QS_DATA_PREP",
   "settings": {
     "flowAnchorSourcesAndSinks": true,
     "flowDisplaySettings": {
@@ -186,7 +186,8 @@
     },
     "dkuProperties": []
   },
-  "name": "Data Preparation Quick Start",
+  "name": "Data Preparation Quick Start for SOMA PRUTHVINATH",
+  "projectStatus": "Sandbox",
   "imgPattern": 4,
   "showInitials": false,
   "metrics": {
