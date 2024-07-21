@@ -1,0 +1,175 @@
+{
+  "joins": [
+    {
+      "table2": 1,
+      "table1": 0,
+      "conditionsMode": "AND",
+      "type": "LEFT",
+      "outerJoinOnTheLeft": true,
+      "on": []
+    }
+  ],
+  "selectedColumns": [
+    {
+      "name": "job_id",
+      "table": 0
+    },
+    {
+      "name": "title",
+      "table": 0
+    },
+    {
+      "name": "location",
+      "table": 0
+    },
+    {
+      "name": "Country",
+      "table": 0
+    },
+    {
+      "name": "State",
+      "table": 0
+    },
+    {
+      "name": "City",
+      "table": 0
+    },
+    {
+      "name": "department",
+      "table": 0
+    },
+    {
+      "name": "salary_range",
+      "table": 0
+    },
+    {
+      "name": "company_profile",
+      "table": 0
+    },
+    {
+      "name": "len_company_profile",
+      "table": 0
+    },
+    {
+      "name": "description",
+      "table": 0
+    },
+    {
+      "name": "len_description",
+      "table": 0
+    },
+    {
+      "name": "requirements",
+      "table": 0
+    },
+    {
+      "name": "benefits",
+      "table": 0
+    },
+    {
+      "name": "telecommuting",
+      "table": 0
+    },
+    {
+      "name": "has_company_logo",
+      "table": 0
+    },
+    {
+      "name": "has_questions",
+      "table": 0
+    },
+    {
+      "name": "employment_type",
+      "table": 0
+    },
+    {
+      "name": "required_experience",
+      "table": 0
+    },
+    {
+      "name": "required_education",
+      "table": 0
+    },
+    {
+      "name": "industry",
+      "table": 0
+    },
+    {
+      "name": "function",
+      "table": 0
+    },
+    {
+      "name": "fraudulent",
+      "table": 0
+    },
+    {
+      "name": "education_level",
+      "table": 1
+    },
+    {
+      "name": "median_weekly_earnings_usd",
+      "table": 1
+    }
+  ],
+  "resolvedSelectedColumns": [],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "virtualInputs": [
+    {
+      "outputColumnsSelectionMode": "AUTO_NON_CONFLICTING",
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "originLabel": "job_postings_prepared",
+      "index": 0,
+      "computedColumns": []
+    },
+    {
+      "outputColumnsSelectionMode": "AUTO_NON_CONFLICTING",
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "originLabel": "earnings_by_education",
+      "index": 1,
+      "computedColumns": []
+    }
+  ],
+  "enableAutoCastInJoinConditions": false
+}
