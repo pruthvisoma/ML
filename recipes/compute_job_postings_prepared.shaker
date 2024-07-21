@@ -160,7 +160,7 @@
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "length(company_profile)",
+        "expression": "length(description)",
         "column": "len_description"
       },
       "alwaysShowComment": false
