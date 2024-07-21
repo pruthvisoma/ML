@@ -33,8 +33,139 @@
   },
   "explorationFilters": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "createdColumnCount": 3
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnSplitter",
+      "params": {
+        "inCol": "location",
+        "startFrom": "beginning",
+        "keepEmptyChunks": false,
+        "limit": 3,
+        "separator": ",",
+        "outColPrefix": "location_",
+        "limitOutput": true,
+        "target": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "location_0",
+            "to": "Country"
+          },
+          {
+            "from": "location_1",
+            "to": "State"
+          },
+          {
+            "from": "location_2",
+            "to": "City"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "TextSimplifierProcessor",
+      "params": {
+        "inCol": "company_profile",
+        "sortAlphabetically": false,
+        "normalize": true,
+        "language": "english",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "TextSimplifierProcessor",
+      "params": {
+        "inCol": "description",
+        "sortAlphabetically": false,
+        "normalize": true,
+        "language": "english",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "TextSimplifierProcessor",
+      "params": {
+        "inCol": "requirements",
+        "sortAlphabetically": false,
+        "normalize": true,
+        "language": "english",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "TextSimplifierProcessor",
+      "params": {
+        "inCol": "benefits",
+        "sortAlphabetically": false,
+        "normalize": true,
+        "language": "english",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "length(company_profile)",
+        "column": "len_company_profile"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "length(company_profile)",
+        "column": "len_description"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -61,7 +192,40 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "benefits": 300,
+    "location_0": 100,
+    "location_1": 100,
+    "employment_type": 128,
+    "required_education": 162,
+    "location_8": 100,
+    "description": 300,
+    "industry": 190,
+    "location_6": 100,
+    "location_7": 100,
+    "title": 300,
+    "location_4": 100,
+    "location_5": 100,
+    "location_2": 204,
+    "salary_range": 105,
+    "location_3": 100,
+    "len_description": 128,
+    "company_profile": 300,
+    "function": 120,
+    "department": 183,
+    "telecommuting": 113,
+    "fraudulent": 100,
+    "requirements": 300,
+    "has_questions": 113,
+    "City": 204,
+    "has_company_logo": 135,
+    "job_id": 100,
+    "State": 100,
+    "Country": 100,
+    "location": 225,
+    "required_experience": 158,
+    "len_company_profile": 158
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
