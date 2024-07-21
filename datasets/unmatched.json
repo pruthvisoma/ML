@@ -81,7 +81,10 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {"name":"education_level","type":"string"},
+      {"name":"median_weekly_earnings_usd","type":"bigint"}
+    ],
     "userModified": true
   },
   "dkuProperties": [],
